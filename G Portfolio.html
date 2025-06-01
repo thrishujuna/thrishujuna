@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.Dinesh Reddy - Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+    <style>
+        /* Reset and Common Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748; /* Default text color */
+            background-color: #f7fafc; /* Default background color */
+        }
+
+        body.dark-mode {
+            color: #f7fafc;
+            background-color: #1a202c;
+        }
+
+        a {
+            text-decoration: none;
+            color: #a78bfa; /* Default link color */
+        }
+
+        a:hover {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #fff; /* Default header background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        body.dark-mode header {
+            background-color: #2d3748;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: #2d3748; /* Default logo color */
+        }
+
+        body.dark-mode .logo {
+            color: #f7fafc;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links li a {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .nav-links li a:hover {
+            color: white;
+			background : white;
+			background-color: #a78bfa;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-button {
+            background-color: red;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-button:hover {
+            background-color: #f56565;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Vertically align items */
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem; /* Space between content and image */
+            flex-direction: row; /* Ensure content and image are in a row */
+        }
+
+        .hero-content {
+            flex: 1; /* Allow content to take up available space */
+            text-align: left;
+            display: flex; /* Enable flexbox for content */
+            flex-direction: column; /* Stack heading and paragraph vertically */
+            align-items: flex-start; /* Align items to the start (left in LTR) */
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 0; /* Remove default margin-bottom from heading */
+            display: inline-flex; /* Use inline-flex to control alignment */
+            align-items: center; /* Vertically center heading and image */
+            gap: 1rem; /* Add some gap between heading and image */
+        }
+
+        body.dark-mode .hero-content h1 {
+            color: #f7fafc;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: #4a5568; /* Default paragraph color */
+            margin-bottom: 2rem;
+            display: flex; /* Enable flexbox */
+            justify-content: space-between; /* Push image to the right */
+            align-items: center; /* Vertically align image */
+        }
+
+        body.dark-mode .hero-content p {
+            color: #a0aec0;
+        }
+
+        .hero-content p img {
+            max-width: 120px;
+            border-radius: 50%;
+            margin-left: 1rem; /* Add some space between text and image */
+        }
+
+        .cta-button {
+            background-color: #a78bfa;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #f56565;
+        }
+
+        .hero-image {
+            flex: 1; /* Allow image to take up space */
+            max-width: 400px; /* Limit image width */
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 0; /* Reset margin-top for image */
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* About Section */
+        #about {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2d3748; /* Default heading color */
+        }
+
+        body.dark-mode #about h2 {
+            color: #f7fafc;
+        }
+
+        .about-content {
+            padding: 0 2rem;
+            text-align: left;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #4a5568; /* Default paragraph color */
+            margin-bottom: 1rem;
+        }
+
+        body.dark-mode .about-content p {
+            color: #a0aec0;
+        }
+
+        .key-skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .key-skills li {
+            background-color: #edf2f7; /* Default skill background */
+            color: #2d3748; /* Default skill text color */
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        body.dark-mode .key-skills li {
+            background-color: #4a5568;
+            color: #f7fafc;
+        }
+
+
+        /* Projects Section */
+        #projects {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #edf2f7; /* Default project background */
+        }
+
+        body.dark-mode #projects {
+            background-color: #2d3748;
+        }
+
+        #projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2d3748; /* Default heading color */
+        }
+
+        body.dark-mode #projects h2 {
+            color: #f7fafc;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background-color: #fff; /* Default project card background */
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        body.dark-mode .project-card {
+            background-color: #4a5568;
+            color: #f7fafc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-card:hover {
+            transform: translateY(-0.5rem);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2d3748; /* Default project title color */
+        }
+
+        body.dark-mode .project-card h3 {
+            color: #f7fafc;
+        }
+
+        .project-card p {
+            font-size: 1.1rem;
+            color: #4a5568; /* Default project description color */
+            margin-bottom: 1rem;
+        }
+
+        body.dark-mode .project-card p {
+            color: #a0aec0;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-links a {
+            background-color: #a78bfa;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .project-links a:hover {
+            background-color: #f56565;
+        }
+
+        .view-all-projects {
+            margin-top: 3rem;
+        }
+
+        .secondary-button {
+            background-color: transparent;
+            border: 2px solid #a78bfa;
+            color: #a78bfa;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .secondary-button:hover {
+            background-color: #a78bfa;
+            color: #fff;
+            border-color: #a78bfa;
+        }
+
+
+        /* Skills Section */
+        #skills {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2d3748; /* Default heading color */
+        }
+
+        body.dark-mode #skills h2 {
+            color: #f7fafc;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .skill-category {
+            background-color: #fff; /* Default skill category background */
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .skill-category {
+            background-color: #4a5568;
+            color: #f7fafc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748; /* Default skill category title color */
+        }
+
+        body.dark-mode .skill-category h3 {
+            color: #f7fafc;
+        }
+
+        .skill-category ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-category li {
+            font-size: 1.1rem;
+            color: #4a5568; /* Default skill item color */
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        body.dark-mode .skill-category li {
+            color: #a0aec0;
+        }
+
+        .skill-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 0.5rem;
+        }
+
+
+        /* Contact Section */
+        #contact {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #edf2f7; /* Default contact background */
+        }
+
+        body.dark-mode #contact {
+            background-color: #2d3748;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2d3748; /* Default heading color */
+        }
+
+        body.dark-mode #contact h2 {
+            color: #f7fafc;
+        }
+
+        .contact-info {
+            background-color: #fff; /* Default contact info background */
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            line-height: 1.8;
+        }
+	
+        body.dark-mode .contact-info {
+            background-color: #2d3748;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #718096;
+        }
+
+        body.dark-mode .contact-info p {
+            color: #a0aec0;
+        }
+
+        .contact-info a {
+            font-size: 1.3rem;
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 5rem;
+            border-top: 1px solid #2d3748;
+        }
+
+        body.dark-mode footer {
+            background-color: #1a202c;
+            color: #fff;
+            border-top: 1px solid #4a5568;}/* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 66px; /* Adjusted top to be below fixed header */
+                right: 0;
+                left: 0;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            body.dark-mode .nav-links {
+                background-color: #2d3748;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 1.25rem 0;
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+
+            #hero {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .hero-content {
+                margin-bottom: 2rem;
+                align-items: center; /* Center content in mobile view */
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+                text-align: center; /* Center heading in mobile view */
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+                text-align: center; /* Center paragraph in mobile view */
+                display: flex;
+                flex-direction: column; /* Stack text and image vertically */
+                align-items: center; /* Center items */
+            }
+
+            .hero-content p img {
+                margin-left: 0; /* Remove left margin */
+                margin-top: 1rem; /* Add top margin to separate text and image */
+            }
+
+            .hero-image {
+                margin-top: 2rem;
+                max-width: 100%;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                padding: 2rem;
+                text-align: left; /* Keep left alignment for readability */
+            }
+        }
+
+        /* Burger Styles */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 12px;
+        }
+
+        .burger .line1,
+        .burger .line2,
+        .burger .line3 {
+            width: 30px;
+            height: 4px;
+            background-color: #2d3748;
+            margin: 6px 0;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        body.dark-mode .burger .line1,
+        body.dark-mode .burger .line2,
+        body.dark-mode .burger .line3 {
+            background-color: #f7fafc;
+        }
+
+        .burger.active .line1 {
+            transform: rotate(-45deg) translate(-7px, 8px);
+        }
+
+        .burger.active .line2 {
+            opacity: 0;
+        }
+
+        .burger.active .line3 {
+            transform: rotate(45deg) translate(-7px, -8px);
+        }
+
+        /* Dark Mode Toggle Styles */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+		 /* Certificates and Achievements Section */
+         #achievements {
+             padding: 4rem 2rem;
+             max-width: 1200px;
+             margin: 0 auto;
+             text-align: center;
+         }
+ 
+
+         #achievements h2 {
+             font-size: 2.5rem;
+             margin-bottom: 2rem;
+             color: #2d3748; /* Default heading color */
+         }
+ 
+
+         body.dark-mode #achievements h2 {
+             color: #f7fafc;
+         }
+ 
+
+         .certificates-list {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+             gap: 2rem;
+             margin-top: 2rem;
+         }
+ 
+
+         .certificate-card {
+             background-color: #fff; /* Default certificate card background */
+             border-radius: 0.5rem;
+             padding: 1.5rem;
+             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+             text-align: center;
+         }
+ 
+
+         body.dark-mode .certificate-card {
+             background-color: #4a5568;
+             color: #f7fafc;
+             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+         }
+ 
+
+         .certificate-card h3 {
+             font-size: 1.3rem;
+             margin-bottom: 0.5rem;
+             color: #2d3748; /* Default certificate title color */
+         }
+ 
+
+         body.dark-mode .certificate-card h3 {
+             color: #f7fafc;
+         }
+ 
+
+         .certificate-card a {
+             display: inline-block;
+             margin-top: 1rem;
+             background-color: #a78bfa;
+             color: #fff;
+             padding: 0.5rem 1rem;
+             border-radius: 0.5rem;
+             font-weight: 600;
+             transition: background-color 0.3s ease;
+         }
+ 
+
+         .certificate-card a:hover {
+             background-color: #f56565;
+         }
+        input:checked + .slider {
+            background-color: #a78bfa;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #a78bfa;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* AI Assistant Styles */
+        #ai-assistant-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #a78bfa;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        #ai-assistant-icon:hover {
+            background-color: #f56565;
+        }
+
+        #ai-chat-window {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 350px;
+            height: 400px;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        body.dark-mode #ai-chat-window {
+            background-color: #2d3748;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        #ai-chat-header {
+            padding: 1rem;
+            background-color: #a78bfa;
+            color: #fff;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        body.dark-mode #ai-chat-header {
+            background-color: #a78bfa;
+            color: #fff;
+        }
+
+        #ai-chat-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #ai-chat-input-area {
+            padding: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        body.dark-mode #ai-chat-input-area{
+            border-top: 1px solid #4a5568;
+        }
+
+        #ai-chat-input {
+            flex: 1;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            font-size: 1rem;
+        }
+
+        body.dark-mode #ai-chat-input {
+            border-color: #4a5568;
+            background-color: #edf2f7;
+            color: #2d3748;
+        }
+
+        #ai-chat-submit {
+            padding: 0.75rem 1.5rem;
+            background-color: #a78bfa;
+            color: #fff;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        #ai-chat-submit:hover {
+            background-color: #f56565;
+        }
+
+        .message {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            max-width: 80%;
+        }
+
+        .user-message {
+            background-color: #a78bfa;
+            color: #fff;
+            align-self: flex-end;
+        }
+
+        .ai-message {
+            background-color: #edf2f7;
+            color: #2d3748;
+            align-self: flex-start;
+        }
+
+        body.dark-mode .ai-message {
+            background-color: #4a5568;
+            color: #fff;
+        }
+
+        .skill-icon {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#Achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="path/to/your/resume.pdf" target="_blank" class="resume-button">Resume</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="toggle-container">
+                <i class="ph-duotone ph-sun"></i>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider"></span>
+                </label>
+                <i class="ph-duotone ph-moon"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>
+                    I'm Kommi Reddy Dinesh Reddy,<br> Data Scientist
+                </h1>
+                <p>
+                    I'm a data scientist driven by a passion for turning data into meaningful, high-impact solutions. With deep expertise in machine learning, statistical modeling, and data visualization, I excel at uncovering patterns, solving complex problems, and translating data into actionable insights that inform strategic decision-making and fuel innovation.
+                    <a href="https://media.licdn.com/dms/image/v2/D4E03AQFi5AYe-HhEeQ/profile-displayphoto-shrink_800_800/B4EZVHynOxGwAg-/0/1740666209007?e=1752710400&v=beta&t=NSvh7K5Le6kAKXtVc4byTcpxbdznX5cFsBuqkLOiofs" target="_blank" style="display: inline-block;">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFi5AYe-HhEeQ/profile-displayphoto-shrink_800_800/B4EZVHynOxGwAg-/0/1740666209007?e=1752710400&v=beta&t=NSvh7K5Le6kAKXtVc4byTcpxbdznX5cFsBuqkLOiofs" alt="Your Profile Picture" style="max-width: 300px; border-radius: 50%;">
+                    </a>
+                </p>
+                <a href="#projects" class="cta-button">Explore My Work</a>
+            </div>
+        </section>
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! I'm K.Dinesh Reddy, a data scientist with a strong background in Data Science. I hold a Bachelor's degree in Artificial Intelligence and Data Science from Annamacharya Institute of Technology & Sciences, Rajampet</p>
+                <p>I'm passionate about applying data science techniques to solve real-world problems. My goal is to use my skills in machine learning, data analysis, and data visualization to help organizations make better decisions.</p>
+                <p>Here are some of my key skills:</p>
+                <ul class="key-skills">
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Data Visualization</li>
+                    <li>Statistical Modeling</li>
+                    <li>Big Data</li>
+                </ul>
+            </div>
+        </section>
+        <section id="projects" class="projects-section">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/project1-placeholder.png" alt="Project 1 Image">
+                    <h3>Project Title 1</h3>
+                    <p>Analyzing Customer Churn</p>
+                    <div class="project-links">
+                        <a href="link-to-project1-github" target="_blank">GitHub</a>
+                        <a href="link-to-project1-demo" target="_blank">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2-placeholder.png" alt="Project 2 Image">
+                    <h3>Project Title 2</h3>
+                    <p>Predicting House Prices</p>
+                    <div class="project-links">
+                        <a href="link-to-project2-github" target="_blank">GitHub</a>
+                        <a href="link-to-project2-demo" target="_blank">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3-placeholder.png" alt="Project 3 Image">
+                    <h3>Project Title 3</h3>
+                    <p>Sentiment Analysis of Tweets</p>
+                    <div class="project-links">
+                        <a href="link-to-project3-github" target="_blank">GitHub</a>
+                        <a href="link-to-project3-demo" target="_blank">Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-projects">
+                <a href="/projects" class="secondary-button">View All Projects</a>
+            </div>
+        </section>
+        <section id="achievements">
+         <h2>Certificates and Achievements</h2>
+         <div class="certificates-list">
+             <div class="certificate-card">
+                 <h3>Introduction to Artificial Intelligence (AI)</h3>
+                 <a href="https://drive.google.com/file/d/11nXmwB0Dd235pwoCqka0XnHiafX79lc3/view?usp=drive_link" target="_blank">View Certificate</a>
+             </div>
+             <div class="certificate-card">
+                 <h3>Data Structures from Coursera Learner</h3>
+                 <a href="https://drive.google.com/file/d/1sy7W2G7abakEcee8KHV40HNU7TOlPe0H/view?usp=drive_link" target="_blank">View Certificate</a>
+             </div>
+             <div class="certificate-card">
+                 <h3>Basics of Python infosys springboard</h3>
+                 <a href="https://drive.google.com/file/d/1cbHVAwQNZU85MHXQG261IVWBRLM5ll68/view?usp=drive_link" target="_blank">View Certificate</a>
+             </div>
+             <div class="certificate-card">
+                 <h3>SQL for Beginners: Querying Data</h3>
+                 <a href="https://drive.google.com/file/d/1qv1c9wqZ-GgPlAogqxp3m4fmSFuZtAbg/view?usp=drive_link" target="_blank">View Certificate</a>
+             </div>
+             <div class="certificate-card">
+                 <h3>SQL Functions</h3>
+                 <a href="https://drive.google.com/file/d/1eSyj8f3b3ayB9VjIXqTvrF7be3whRZHU/view?usp=drive_link" target="_blank">View Certificate</a>
+             </div>
+             <div class="certificate-card">
+                 <h3>Working with Subqueries in SQL</h3>
+                 <a href="https://drive.google.com/file/d/1PAlSIRRKL5aJdn_WZ5OSmqyqqGJFIv6S/view?usp=drive_link" target="_blank">View Certificate</a>
+             </div>
+             </div>
+     </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <p><i class="ph-duotone ph-envelope"></i> Email: <a href="mailto:dineshreddykommireddy2004@gmail.com">dineshreddykommireddy2004@gmail.com</a></p>
+                <p><i class="fa fa-linkedin-square"></i> LinkedIn: <a href="https://www.linkedin.com/in/dinesh-reddy-kommi-reddy-639878305/" target="_blank">linkedin.com/in/dinesh-reddy-kommi-reddy-639878305/</a></p>
+                <p><i class="ph-duotone ph-github-logo"></i> GitHub: <a href="https://github.com/DineshReddy2624" target="_blank">github.com/DineshReddy2624</a></p>
+                <p><i class="ph-duotone ph-map-pin"></i> Hyderabad, Telangana, India</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 K.Dinesh Reddy. All rights reserved.</p>
+    </footer>
+
+    <div id="ai-assistant-icon">
+        <i class="ph-duotone ph-robot"></i>
+    </div>
+
+    <div id="ai-chat-window">
+        <div id="ai-chat-header">
+            AI Assistant
+        </div>
+        <div id="ai-chat-messages">
+            </div>
+        <div id="ai-chat-input-area">
+            <input type="text" id="ai-chat-input" placeholder="Ask me anything...">
+            <button id="ai-chat-submit">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        const aiAssistantIcon = document.getElementById('ai-assistant-icon');
+        const aiChatWindow = document.getElementById('ai-chat-window');
+        const aiChatInput = document.getElementById('ai-chat-input');
+        const aiChatSubmit = document.getElementById('ai-chat-submit');
+        const logo = document.querySelector('.logo');
+        const heroSection = document.getElementById('hero');
+        const aiChatMessages = document.getElementById('ai-chat-messages');
+
+        // Set initial logo text
+        logo.textContent = "My Portfolio";
+
+        // Function to handle logo text change on scroll
+        function handleScroll() {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            if (window.scrollY >= heroBottom) {
+                logo.textContent = "K.DINESH REDDY";
+            } else {
+                logo.textContent = "My Portfolio";
+            }
+        }
+
+        // Event listener for scroll
+        window.addEventListener('scroll', handleScroll);
+
+        // Burger menu functionality
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+
+        // Dark mode toggle functionality
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        // AI assistant toggle functionality
+        aiAssistantIcon.addEventListener('click', () => {
+            aiChatWindow.style.display = aiChatWindow.style.display === 'none' ? 'flex' : 'none';
+        });
+
+        // Function to add a message to the chat window
+        function addMessage(text, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.classList.add(isUser ? 'user-message' : 'ai-message');
+            messageDiv.textContent = text;
+            aiChatMessages.appendChild(messageDiv);
+            aiChatMessages.scrollTop = aiChatMessages.scrollHeight; // Scroll to bottom
+        }
+
+        // Event listener for sending a message
+        aiChatSubmit.addEventListener('click', () => {
+            const message = aiChatInput.value.trim();
+            if (message) {
+                addMessage(message, true);
+                aiChatInput.value = '';
+                // Simulate AI response (replace with actual AI integration)
+                setTimeout(() => {
+                    addMessage("This is a simulated AI response.", false);
+                }, 500);
+            }
+        });
+
+        // Allow sending message with Enter key
+        aiChatInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                aiChatSubmit.click();
+            }
+        });
+    </script>
+</body>
+</html>
