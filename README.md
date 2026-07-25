@@ -133,9 +133,5 @@ Thanks for visiting my profile! 🚀
 ⭐ Thanks for visiting my profile!
 ## 🐍 Contribution Snake
 
-## 🐍 Contribution Snake
-
 ![Snake animation](https://github.com/thrishujuna/thrishujuna/blob/output/github-contribution-grid-snake.svg)
-thrishujuna/thrishujuna is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
 --->
